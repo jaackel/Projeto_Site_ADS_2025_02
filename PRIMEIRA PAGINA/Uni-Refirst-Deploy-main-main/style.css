@@ -1,0 +1,278 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background: transparent;
+}
+
+.menu-header {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo img {
+  height: 150px;
+}
+
+.btn-motorista, .btn-sobre {
+  background-color: #f56a2a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero, foto dos caminhoes da primeira pagina */ 
+.hero {
+  background: url("img/Carros.png") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-acao {
+  background-color: #f56a2a;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Cards PRIMEIRA PÁGINA */
+.vantagens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 40px;
+  background: #f4f4f4;
+}
+
+.vantagens .card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+.vantagens .card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.vantagens .card.destaque {
+  background: #f56a2a;
+  color: #fff;
+}
+
+
+section.hero {
+  height: 100vh;
+  background-position: center;
+}
+
+
+/* SEGUNDA PÁGINA - SOBRE */
+.sobre {
+  min-height: 100vh;
+  background-color: #606060; /* Cor mais clara */
+  background-image: url("img/mapa.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 80px 20px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+ section.sobre {
+  height: 100vh;
+  background-color: #434343;
+  background-image: url("img/mapa.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+} 
+
+
+.sobre h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-empresa {
+  background: transparent;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.sobre-empresa h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* CARDS DA SEGUNDA PÁGINA - 4 CARDS */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  grid-template-rows: repeat(2, 1fr);    /* 2 linhas */
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CARDS ESPECÍFICOS PARA A PÁGINA SOBRE */
+.sobre-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: black;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sobre-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.sobre-card .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.sobre-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #f56a2a;
+}
+
+.sobre-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sobre-card ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.sobre-card ul li::before {
+  content: "•";
+  color: #f56a2a;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
+.card {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 14px;
+}

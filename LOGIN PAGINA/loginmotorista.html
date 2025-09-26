@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Motorista - Fretou</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/Logo-Azul.png" alt="Logo Caminhão">
+     
+    </div>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <h2>Área do Motorista</h2>
+      <p>Faça login para acessar sua conta</p>
+      
+      <form id="loginForm">
+        <input type="text" id="usuario" placeholder="Usuário" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="cadastro">Não tem conta? <a href="#">Cadastre-se</a></p>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const usuario = document.getElementById("usuario").value;
+      const senha = document.getElementById("senha").value;
+
+      // ⚠️ Apenas exemplo: salvar no localStorage
+      localStorage.setItem("usuario", usuario);
+      localStorage.setItem("senha", senha);
+
+      alert("Login realizado com sucesso!");
+    });
+  </script>
+</body>
+</html>
