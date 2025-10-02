@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #222;
+}
+
+.section-uber {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  height: 125vh;
+}
+
+/* Coluna da esquerda (endereços) */
+.ride-form {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+}
+.ride-form h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+.ride-form input {
+  width: 90.5%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.option {
+  width: 94.7%;
+  padding: 17px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  align-items: center;
+}
+
+.option:hover {
+  border-color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Coluna da direita (mapa) */
+.map {
+  background: url("https://www.google.com/maps/@-23.44496,-46.7468288,14z?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D")
+    no-repeat center;
+  background-size: cover;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Responsivo */
+@media (max-width: 0px) {
+  .section-uber {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .map {
+    height: 20px;
+  }
+}
